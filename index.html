@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<title>Login Form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/validation_language_en.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+</head>
+
+<body>
+
+<div id="login-container" class="login-container">
+        <div class="card card-container">
+        <img src="images/avatar.png" class="profile-img-card" />
+        <span id="reauth-email" class="reauth-email"></span>
+        <form id="login-form" class="form-signin" autocomplete="off" method="post" accept-charset="utf-8">
+            <div class="form-wrapper">
+                <input type="text" name="email1" value="" class="form-control" placeholder="Email" data-label="Email" data-validate="required|valid_email"  />
+            </div>
+            <div class="form-wrapper">
+                <input type="password" name="password" value="" class="form-control" placeholder="Password" data-label="Password" data-validate="required"  />
+            </div>
+            <div id="remember" class="checkbox">
+                <a href="javascript:;" class="forgot-password">Forgot the password?</a>
+                <label>
+                    <input type="checkbox" name="chk_remember_me" value="1" data-label="Remember Me" data-validate="is_checked|integer"  />
+ Remember me
+                </label>
+            </div>
+            <input type="submit" name="submit_sign_in" value="Sign in" class="btn btn-lg btn-primary btn-block btn-signin"  />
+        </form>    </div>
+</div>
+<script type="text/javascript">
+    $('form').doValidate();
+</script>
+</body>
+</html>
